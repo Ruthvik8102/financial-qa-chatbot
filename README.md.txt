@@ -1,15 +1,18 @@
 # 💬 GenAI-powered Financial Q&A Chatbot
 
-A simple chatbot that uses **LangChain + HuggingFace Transformers** to answer finance-related questions.
+A **Generative AI chatbot** built using **LangChain + HuggingFace Transformers + Streamlit**.  
+This project demonstrates how **Large Language Models (LLMs)** can be applied in **finance** to answer user queries in real time.  
+
+---
 
 ## 🚀 Features
-- Uses a lightweight HuggingFace model (`distilgpt2`)
-- LangChain for prompt management
-- Deployed with Streamlit UI
-- Extendable for finance-specific datasets
+- 🧠 Lightweight HuggingFace model (`distilgpt2`) for text generation  
+- 🔗 Integrated with **LangChain** for better prompt handling  
+- 💬 Interactive **Streamlit** UI for chatting  
+- 📊 Focused on **finance-related Q&A** (mutual funds, credit risk, stock basics, etc.)  
+- ⚡ Easily extendable to custom datasets or enterprise use cases  
 
-## 📦 Installation
-```bash
-git clone https://github.com/your-username/financial-qa-chatbot.git
-cd financial-qa-chatbot
-pip install -r requirements.txt
+---
+
+## 📂 Project Structure
+
