@@ -1,0 +1,30 @@
+import streamlit as st
+from langchain.llms import HuggingFacePipeline
+from langchain import PromptTemplate, LLMChain
+from transformers import pipeline
+
+# Streamlit UI
+st.set_page_config(page_title="Financial Q&A Chatbot", page_icon="💰")
+st.title("💬 GenAI-powered Financial Q&A Chatbot")
+
+# Load a lightweight HuggingFace model
+generator = pipeline("text-generation", model="distilgpt2", max_length=200)
+llm = HuggingFacePipeline(pipeline=generator)
+
+# Prompt template
+template = """You are a financial assistant. Answer the user query clearly and concisely.
+
+Question: {question}
+Answer:"""
+
+prompt = PromptTemplate(template=template, input_variables=["question"])
+chain = LLMChain(prompt=prompt, llm=llm)
+
+# Input box
+user_input = st.text_input("Ask a financial question (e.g., What is mutual fund SIP?)")
+
+if user_input:
+    response = chain.run(user_input)
+    st.write("### 📌 Answer:")
+    st.write(response)
+
