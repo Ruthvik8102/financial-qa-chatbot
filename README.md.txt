@@ -24,18 +24,15 @@ financial-qa-chatbot/
 
 ## 📦 Installation
 Clone the repo:
-```bash
 git clone https://github.com/your-username/financial-qa-chatbot.git
 cd financial-qa-chatbot
 Install dependencies:
 
-bash
-Copy code
+
 pip install -r requirements.txt
 Run the app:
 
-bash
-Copy code
+
 streamlit run app.py
 📸 Demo
 Example queries and responses:
@@ -60,5 +57,6 @@ Demonstrates how even lightweight LLMs can handle domain-focused Q&A when paired
 ☁️ Deploy on HuggingFace Spaces / Streamlit Cloud
 
 🤖 Experiment with OpenAI GPT / Llama2 for improved accuracy
+
 
 
